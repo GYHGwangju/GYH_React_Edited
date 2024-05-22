@@ -10,7 +10,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
   const router = createBrowserRouter([
@@ -49,7 +49,9 @@ function App() {
   return (
     <div>
       <RouterProvider router={router} />
+      
     </div>
+    
   );
 }
 

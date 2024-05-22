@@ -19,30 +19,30 @@ const Purchase = () => {
         <div className='purchase-container'>
             <Row style={{ height: '100%', width: '100%' }}>
                 <Col md={4}>
-                    <div className='purchase-img'>
-                        <img src={status === 0 ? purchaseImg : completeImg} alt="purchase" />
+                    <div className='purchase-img'  style={{position:'relative', top:'35%', left:'30%'}}>
+                        <img src={status === 0 ? purchaseImg : completeImg} alt="purchase"/>
                     </div>
                 </Col>
                 <Col md={4}>
-                    <div className='purchase-info'>
+                    <div className='purchase-info' >
                         {
                             status === 0 ? <>
                                 <span style={{ fontSize: 96 }}>결제 대기</span>
                                 <span style={{ fontSize: 64 }}>카드를 단말기에 넣어주세요.</span>
                             </> : <>
-                                <span style={{ fontSize: 96 }}>결제 완료</span>
-                                <span style={{ fontSize: 64 }}>이용해주셔서 감사합니다.
-                                    <br />
+                                <span style={{ fontSize: 96 , position:'absolute', top:'15%',right:'25%'}}>결제 완료</span>
+                                <span style={{ fontSize: 64,  width:'auto', position:'absolute', top:'30%',right:'16%' }}>이용해주셔서 감사합니다.
+                                    <br/>
                                     카드를 빼주세요.</span>
-                                <span style={{ fontSize: 96 }}>주문 번호</span>
-                                <span style={{ fontSize: 96, color: 'rgba(255,0,0,1)' }} >007</span>
+                                <span style={{ fontSize: 96, position:'absolute', top:'50%',right:'25%' }}>주문 번호</span>
+                                <span style={{ fontSize: 96, color: 'rgba(255,0,0,1)', position:'absolute', top:'65%',right:'31%'  }} >007</span>
                             </>
                         }
                     </div>
                 </Col>
             </Row>
-            
         </div>
+        
         
     );
 };
